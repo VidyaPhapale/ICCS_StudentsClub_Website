@@ -1,24 +1,7 @@
 ﻿
 <%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="LoginPage.aspx.cs" Inherits="WebApplication2.LoginPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style type="text/css">
-        .auto-style3 {
-            display: block;
-            width: 100%;
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: 1.5;
-            color: #212529;
-            background-clip: padding-box;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            border-radius: .25rem;
-            transition: none;
-            border: 1px solid #ced4da;
-            background-color: #fff;
-        }
-    </style>
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
@@ -61,12 +44,12 @@
                                  <label>Password</label>
                                 <div class="form-group">
                                    
-                                    <asp:TextBox CssClass="auto-style3" ID="TextBox2" runat="server" placeholder="Password"></asp:TextBox>
-                                    <br />
-
+                                    <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
+                                   
 
                                 </div>
-
+                                 
+                                <br />
                              <div class="form-group">
                                    
                                  <asp:Button ID="Button1" class="btn btn-success w-100 d-block btn-lg" runat="server" Text="Login" OnClientClick="sssss" OnClick="Button1_Click" />

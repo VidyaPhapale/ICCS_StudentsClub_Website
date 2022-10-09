@@ -11,7 +11,14 @@
                            <div class="row">
                             <div class="col">
                                 <center>
-                                    <span class="badge alert-danger">Questions For You</span>
+                                    <span class="badge alert-danger">Give Answer...!!!</span>
+                                    <br />
+                                    <br />
+                                    <asp:TextBox ID="TextBox1" runat="server" PlaceHolder="Type Here..." TextMode="MultiLine" Rows="4" Width="364px"></asp:TextBox>
+                                    <br />
+                                    <br />
+                                    <asp:Button ID="Button1" CssClass="btn btn-primary" runat="server" Text="SAVE" OnClick="Button1_Click" />
+
                                 </center>
                                 <br />
                             </div>

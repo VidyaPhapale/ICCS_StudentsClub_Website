@@ -1,4 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="AlumniRegistration.aspx.cs" Inherits="WebApplication2.WebForm4" %>
+﻿
+
+<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="AlumniRegistration.aspx.cs" Inherits="WebApplication2.WebForm4" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -38,7 +40,7 @@
                                    
                                     <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="First Name" TextMode="SingleLine"></asp:TextBox>
 
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ValidationGroup="Group" ErrorMessage="This Field is Required" ForeColor="Red" ControlToValidate="TextBox4" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ValidationGroup="Group" Display="Dynamic"  ErrorMessage="This Field is Required" ForeColor="Red" ControlToValidate="TextBox4" SetFocusOnError="True">This Field is Required</asp:RequiredFieldValidator>
 
                                 </div>
                                 
@@ -48,8 +50,8 @@
                                   <label>Middle Name</label>
                                 <div class="form-group">
                                    
-                                    <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Middle Name" TextMode="SingleLine"></asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" Display="Dynamic" ValidationGroup="Group" ErrorMessage="This Field is required" ForeColor="Red" ControlToValidate="TextBox3" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+                                    <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" ValidationGroup="Group" placeholder="Middle Name" TextMode="SingleLine"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ValidationGroup="Group" Display="Dynamic"  ErrorMessage="This Field is required" ForeColor="Red" ControlToValidate="TextBox3" SetFocusOnError="True">This Field is Required</asp:RequiredFieldValidator>
                                     <br />
                                 </div>
                             </div>
@@ -59,8 +61,8 @@
                                   <label>Last Name</label>
                                 <div class="form-group">
                                    
-                                    <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Last Name" TextMode="SingleLine"></asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" Display="Dynamic" ValidationGroup="Group" ErrorMessage="This Field is required" ForeColor="Red" ControlToValidate="TextBox11" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+                                    <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" ValidationGroup="Group" placeholder="Last Name" TextMode="SingleLine"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ValidationGroup="Group" Display="Dynamic"  ErrorMessage="This Field is required" ForeColor="Red" ControlToValidate="TextBox11" SetFocusOnError="True">This Field is Required</asp:RequiredFieldValidator>
                                     <br />
                                 </div>
                             </div>
@@ -77,7 +79,7 @@
 
                                     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ValidationGroup="Group" ControlToValidate="TextBox2" ErrorMessage="Email ID is incorrect" ForeColor="Red" SetFocusOnError="True" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">Invalid Email</asp:RegularExpressionValidator>
 
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" Display="Dynamic" ValidationGroup="Group" ErrorMessage="This Field is required" ForeColor="Red" ControlToValidate="TextBox12" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ValidationGroup="Group" Display="Dynamic"  ErrorMessage="This Field is required" ForeColor="Red" ControlToValidate="TextBox12" SetFocusOnError="True">This Field is Required</asp:RequiredFieldValidator>
 
                                 </div>
                                 
@@ -88,7 +90,8 @@
                                 <div class="form-group">
                                    
                                     <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="password" TextMode="Password"></asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" Display="Dynamic" ValidationGroup="Group" ErrorMessage="This Field is required" ForeColor="Red" ControlToValidate="TextBox5" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ValidationGroup="Group" ControlToValidate="TextBox5" ErrorMessage="Password Range Is 8 to 10" ForeColor="Red" SetFocusOnError="True" ValidationExpression="^[a-zA-Z0-9]{8,10}$">Password Range Is 8 to 10</asp:RegularExpressionValidator>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ValidationGroup="Group" Display="Dynamic"  ErrorMessage="This Field is required" ForeColor="Red" ControlToValidate="TextBox5" SetFocusOnError="True">This Field is Required</asp:RequiredFieldValidator>
                                     <br />
                                 </div>
                             </div>
@@ -104,7 +107,7 @@
                                    
                                     <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" placeholder="Phone Number" TextMode="Number"></asp:TextBox>
 
-                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox6" ValidationGroup="Group"  ErrorMessage="Enter 10 Digit Number " ForeColor="Red" SetFocusOnError="True" ValidationExpression="\d{10}">Enter 10 digit Number</asp:RegularExpressionValidator>
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ValidationGroup="Group" ControlToValidate="TextBox6"   ErrorMessage="Enter 10 Digit Number " ForeColor="Red" SetFocusOnError="True" ValidationExpression="\d{10}">Enter 10 digit Number</asp:RegularExpressionValidator>
 
                                 </div>
                                 
@@ -127,7 +130,8 @@
                                 <label>Educational Qualification</label>
                                 <div class="form-group">
                                    
-                                    <asp:DropDownList class="form-control" ID="DropDownList1" runat="server">
+                                    <asp:DropDownList class="form-control" ID="DropDownList1" placeholder="Select Course" runat="server">
+                                         <asp:ListItem Text="Select Course" Value="" default="" selected="False"/>
                                         <asp:ListItem Text="BSc Computer Science" Value="bcs" />
                                         <asp:ListItem Text="BBA" Value="bba" />
                                         <asp:ListItem Text="Bachelor of Computer Applications" Value="bca" /> 

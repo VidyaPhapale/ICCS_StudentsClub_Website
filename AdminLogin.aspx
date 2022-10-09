@@ -42,7 +42,7 @@
                                  <label>Password</label>
                                 <div class="form-group">
                                    
-                                    <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Password"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" autocomplete="off" placeholder="Password"></asp:TextBox>
                                     <br />
 
 
@@ -50,7 +50,7 @@
 
                              <div class="form-group">
                                    
-                                 <asp:Button ID="Button1" class="btn btn-success w-100 d-block btn-lg" runat="server" Text="Login" OnClientClick="sssss" OnClick="Button1_Click"  />
+                                 <asp:Button ID="Button1" class="btn btn-success w-100 d-block btn-lg" runat="server" Text="Login"  OnClick="Button1_Click"  />
                                  <br />
                                
 

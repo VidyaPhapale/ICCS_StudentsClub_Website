@@ -14,6 +14,22 @@
         .auto-style2 {
             height: 26px;
         }
+        .auto-style3 {
+            display: block;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            background-clip: padding-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: .25rem;
+            transition: none;
+            border: 1px solid #ced4da;
+            margin-left: 0;
+            background-color: #fff;
+        }
     </style>
     <link href="CSS/Header.css" rel="stylesheet" />
     <link href="CSS/NavBar.css" rel="stylesheet" />  
@@ -28,8 +44,8 @@
 
     <script src="BootStrap/JS/popper.min.js"></script>
     <script src="BootStrap/JS/bootstrap.min.js"></script>
-
-
+    <link href="DataTables/CSS/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="DataTables/JS/jquery.dataTables.min.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -39,14 +55,15 @@
                     <br />
                     <asp:Image ID="Image1" runat="server" Height="94px" ImageUrl="~/Image/Screenshot (5).png" Width="736px" />
                    <div id="reg">
-
+                         <asp:LinkButton ID="LinkButton15" runat="server" style="text-decoration: none" OnClick="LinkButton15_Click">YOUR PROFILE</asp:LinkButton><a>&nbsp</a>
+                            
                        <asp:LinkButton ID="LinkButton8" runat="server" style="text-decoration: none" OnClick="LinkButton8_Click">REGISTER</asp:LinkButton><a>&nbsp::&nbsp  </a>
                  <!--      <a href="Registration.aspx" style="text-decoration: none" >REGISTER</a> <a>&nbsp::&nbsp  </a>  
                     <a href="LoginPage.aspx" style="text-decoration: none">LOGIN</a> 
                        <a href="LoginPage.aspx" style="text-decoration: none">LOGOUT</a> -->
 
                        <asp:LinkButton ID="LinkButton9" runat="server" style="text-decoration: none" OnClick="LinkButton9_Click">LOGIN</asp:LinkButton> <a>&nbsp</a>
-
+                      
                        <asp:LinkButton ID="LinkButton10" runat="server" style="text-decoration: none" OnClick="LinkButton10_Click">LOGOUT</asp:LinkButton>
 
 
@@ -80,28 +97,29 @@
                            <li>
                                <asp:LinkButton ID="LinkButton5" runat="server" OnClick="LinkButton5_Click">JOB UPDATE</asp:LinkButton>
                            </li>
-                           <li>
-                               <asp:LinkButton ID="LinkButton6" runat="server" OnClick="LinkButton6_Click">INTERVIEW EXPERIANCE</asp:LinkButton>
+                        <!--   <li>
+                               <asp:LinkButton ID="LinkButton6" runat="server" OnClick="LinkButton6_Click">INTERVIEW EXPERIENCE</asp:LinkButton>
                            </li>
                            <li>
                                <asp:LinkButton ID="LinkButton7" runat="server" OnClick="LinkButton7_Click">QUIZ CORNER</asp:LinkButton>
                            </li>
-                           
+                          -->
                             </ul>
+           <div class="row>">
+               <div class="col">
+                   <div class="form-group">
+                      
+                <div class="searchbox" style="position: absolute; left: 1150px; top: 33px;">
+                     <div class="input-group">
+                    <asp:TextBox ID="TextBox1" runat="server" CssClass="auto-style3" placeholder="Search People" TextMode="SingleLine" Width="191px" ></asp:TextBox>
+                         <asp:Button ID="Button1" runat="server" class="btn btn-primary w-10 d-block btn-lg" Text="Search" OnClick="Button1_Click" />
+                    </div>
+                           </div>
            
-                <div class="searchbox" style="position: absolute; left: 1200px; top: 35px;">
-                <input type="text"
-                    placeholder=" Search People"
-                    name="search"
-                    id="search">
-                <button>
-                    <i class="searchb"
-                        style="/*font-size: 10px;*/">Search
-                    </i>
-                </button>
-           
+                   </div>
+                    </div>
         </div>
-           
+         
         
     
                        
@@ -126,17 +144,20 @@
                     <div class="admin">
                         <center>
                       <!--  <a href="AdminLogin.aspx" style="text-decoration: none">Admin Login</a> -->
-
+                            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
                             <asp:LinkButton ID="LinkButton11" runat="server" style="text-decoration: none" OnClick="LinkButton11_Click">AdminLogin</asp:LinkButton><a>&nbsp</a> 
-                            <asp:LinkButton ID="LinkButton12" runat="server" style="text-decoration: none" OnClick="LinkButton12_Click">AddEvent</asp:LinkButton>
+                            <asp:LinkButton ID="LinkButton12" runat="server" style="text-decoration: none" OnClick="LinkButton12_Click">AddEvent</asp:LinkButton><a>&nbsp</a> 
+                            <asp:LinkButton ID="LinkButton13" runat="server" style="text-decoration: none" OnClick="LinkButton13_Click" >StudentDetails</asp:LinkButton><a>&nbsp</a>
+                            <asp:LinkButton ID="LinkButton14" runat="server" style="text-decoration: none" OnClick="LinkButton14_Click"  >AlumniDetails</asp:LinkButton>
+                            
                           </center>
 
                     </div>
                     <div class="social">
-                        <a href="#" ><i class="fab fa-instagram" ></i></a>
-                        <a href="#" ><i class="fab fa-twitter"></i></a>
-                        <a href="#" ><i class="fab fa-facebook-f"></i></a>
-                         <a href="#" ><i class='fab fa-linkedin'></i></a>
+                        <a href="https://instagram.com/iccs_pune?igshid=YmMyMTA2M2Y=" ><i class="fab fa-instagram" ></i></a>
+                        <a href="https://twitter.com/indiraiccs "><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/iccs.ac.in/" ><i class="fab fa-facebook-f"></i></a>
+                         <a href="https://www.linkedin.com/school/indira-college-of-commerce-science-pune/" ><i class='fab fa-linkedin'></i></a>
                     </div>
                 </footer>
                 
